@@ -1,0 +1,31 @@
+# Ignora file di configurazione ambientale
+# File .env nella cartella principale e in backend
+.env
+backend/.env
+
+# File .env.local nella cartella frontend
+frontend/.env.local
+
+# Ignora le directory node_modules in backend e frontend
+backend/node_modules/
+frontend/node_modules/
+
+# Altre esclusioni generali comuni per progetti Node.js
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Cache e file temporanei
+*.log
+.cache/
+dist/
+build/
+temp/
+tmp/
+
+# Escludi configurazioni IDE/editor
+.vscode/
+.idea/
+*.swp
