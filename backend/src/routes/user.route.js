@@ -11,6 +11,8 @@ const router = Router();
 // - `req` rappresenta la richiesta HTTP del client.
 // - `res` rappresenta la risposta HTTP che il server invierà al client.
 router.get("/", (req, res) => {
+
+    req.auth.userId
     // Risponde con un semplice messaggio di testo per indicare che la rotta è attiva.
     res.send("User route with GET method");
 });
