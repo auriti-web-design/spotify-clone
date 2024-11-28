@@ -47,10 +47,7 @@ export const requireAdmin = async (req, res, next) => {
         next();
         
     } catch (error) {
-        // Se si verifica un errore durante il recupero dei dettagli dell'utente, logga l'errore sulla console.
-        console.error("Errore nel middleware requireAdmin: ", error);
-        
-        // Risponde con uno status 500 (Internal Server Error) e un messaggio di errore.
-        res.status(500).json({ message: "Errore interno del server", error });
+        // Se si verifica un errore durante la verifica dell'amministratore, lo passa al middleware di gestione degli errori.
+        next(error);
     }
 }
